@@ -1,0 +1,10 @@
+<h2>Usuarios</h2>
+
+<ul>
+    @for (usuario of usuarios; track usuario.id) {
+    <li>
+        {{usuario.name}} - {{usuario.email}}
+        <button (click) = "eliminar(usuario.id)">Eliminar</button>
+    </li>
+    }
+</ul>
