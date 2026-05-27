@@ -16,4 +16,7 @@ export class UsuarioService {
   deleteUsuario(id: number): Observable<void>{
     return this.http.delete<void>(`${this.apiUrl}/${id}`)
   }
+  createUsuario(data: {name: string, email: string}):Observable<Usuario>{
+    return this.http.post<Usuario>(this.apiUrl, data)
+  }
 }

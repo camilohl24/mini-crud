@@ -1,5 +1,11 @@
-<h2>Usuarios</h2>
+<h1>Crud usuarios</h1>
 
+<form [formGroup] = "form" (submit)="crear(); $event.preventDefault()">
+    <input type="text" formControlName = "name"><br><br>
+    <input type="email" formControlName = "email"><br><br>
+    <button type="submit">Crear</button>
+</form>
+<h2>Usuarios creados</h2>
 <ul>
     @for (usuario of usuarios; track usuario.id) {
     <li>
